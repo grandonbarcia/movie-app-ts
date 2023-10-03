@@ -5,7 +5,7 @@ import Headshot from './assests/Headshot.jpg';
 
 const NavBar = () => {
   return (
-    <nav className="flex justify-between w-full p-5 ">
+    <nav className="flex justify-between w-full p-7 fixed z-10 ">
       <div className=" w-1/6 relative overflow-hidden">
         <Image
           className="mr-auto"
@@ -15,8 +15,8 @@ const NavBar = () => {
           alt={'Logo'}
         />
       </div>
-      <div className="flex justify-between items-center w-2/6">
-        <div>Movies</div>
+      <div className="flex justify-between items-center w-2/6 uppercase font-semibold text-white">
+        <div className="text-yellow-500">Movies</div>
         <div>Celebs and Photos</div>
         <div>Community</div>
         <div>News</div>
