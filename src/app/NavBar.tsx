@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Image from 'next/image';
 import Logo from './assests/Logo.png';
 import Headshot from './assests/Headshot.jpg';
@@ -34,11 +33,5 @@ const NavBar = () => {
       </div>
     </nav>
   );
-=======
-
-const NavBar = () => {
-  return <div>NavBar</div>;
->>>>>>> ec66d97a93e2b94f62be041d02322501a8c915b0
 };
-
 export default NavBar;
