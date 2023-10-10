@@ -52,24 +52,27 @@ export default function Home() {
             style={{ backgroundImage: `url(${Banner.src})` }}
             className="w-full h-full  bg-center bg-cover duration-500"
           >
-            <div className="w-full h-full bg-gradient-radial from-transparent to-gray-500 opacity-60 flex justify-center items-center">
-              <div className="w-3/6 h-3/6">
-                <div>
-                  <h1 className="text-6xl uppercase tracking-widest font-semibold">
-                    The Martian
-                  </h1>
-                </div>
-                <div className="w-1/5 flex justify-between uppercase">
+            <div className="w-full h-full bg-gradient-radial from-transparent to-gray-500 opacity-60"></div>
+            <div className="w-3/6 h-2/6 absolute top-[50%] -translate-x-[-50%] translate-y-[-50%] ">
+              <div className="h-3/6">
+                <h1 className="text-6xl uppercase tracking-widest font-bold text-white opacity-100 pb-4 ">
+                  The Martian
+                </h1>
+                <div className="w-2/6 flex justify-between uppercase text-white font-semibold text-sm">
                   <div>adventure</div>
                   <div>sci-fi</div>
                   <div>thriller</div>
                 </div>
-                <div>
-                  <button className="w-1/6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full flex items-center justify-between">
-                    Watch Trailer <BsPlayCircle />
-                  </button>
-                </div>
               </div>
+              <div className="h-3/6">
+                <button className="w-1/5 bg-amber-400 hover:bg-amber-500 text-black font-bold py-4 px-6 rounded-full flex items-center justify-between">
+                  Watch Trailer <BsPlayCircle size={24} />
+                </button>
+              </div>
+            </div>
+            <div className="w-3/6 h-2/6 absolute top-[95%] -translate-x-[-50%] translate-y-[-50%] tracking-widest  ">
+              <div className="text-white text-xl">In theaters</div>
+              <div className="text-amber-400 text-xl">15 Oct, 2015 (USA)</div>
             </div>
           </div>
 
@@ -79,7 +82,6 @@ export default function Home() {
           <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
             <BsChevronCompactRight onClick={nextSlide} />
           </div>
-          <div></div>
         </div>
       </section>
     </main>
