@@ -8,6 +8,8 @@ import {
   BsPlayCircle,
 } from 'react-icons/bs';
 
+import { AiOutlineStar } from 'react-icons/ai';
+
 export default function Home() {
   const slides = [
     {
@@ -53,7 +55,7 @@ export default function Home() {
             className="w-full h-full  bg-center bg-cover duration-500"
           >
             <div className="w-full h-full bg-gradient-radial from-transparent to-gray-500 opacity-60"></div>
-            <div className="w-3/6 h-2/6 absolute top-[50%] -translate-x-[-50%] translate-y-[-50%] ">
+            <div className="w-4/6 h-2/6 absolute top-[50%] -translate-x-[-25%] translate-y-[-50%] ">
               <div className="h-3/6">
                 <h1 className="text-6xl uppercase tracking-widest font-bold text-white opacity-100 pb-4 ">
                   The Martian
@@ -70,7 +72,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="w-3/6 h-2/6 absolute top-[95%] -translate-x-[-50%] translate-y-[-50%] tracking-widest  ">
+            <div className="w-4/6 h-2/6 absolute top-[95%] -translate-x-[-25%] translate-y-[-50%] tracking-widest  ">
               <div className="text-white text-xl">In theaters</div>
               <div className="text-amber-400 text-xl">15 Oct, 2015 (USA)</div>
             </div>
@@ -81,6 +83,28 @@ export default function Home() {
           </div>
           <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
             <BsChevronCompactRight onClick={nextSlide} />
+          </div>
+        </div>
+      </section>
+      <section className="w-[1280px] h-[780px] bg-white mx-auto top-[40%] -translate-x-0 translate-y-[-30%] px-11 pt-5 pb-5">
+        <div className="w-full flex uppercase font-semibold border-b-2 pb-5">
+          <div className="w-4/6 flex justify-between">
+            <div className="">in theaters</div>
+            <div>coming soon</div>
+            <div>charts</div>
+            <div>tv series </div>
+            <div>trailers</div>
+            <div>more</div>
+          </div>
+          <div className="w-2/6  text-right">
+            <button
+              type="button"
+              className=" w-1/4 inline-block rounded bg-yellow-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
+            >
+              <div className="w-full flex justify-between items-center">
+                <AiOutlineStar size={18} /> <span className="text-sm">129</span>
+              </div>
+            </button>
           </div>
         </div>
       </section>
