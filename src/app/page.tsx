@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import Banner from './assests/Banner.jpg';
 import { useState } from 'react';
 import {
@@ -7,8 +9,14 @@ import {
   BsChevronCompactRight,
   BsPlayCircle,
 } from 'react-icons/bs';
-
+import { RiArrowDownSFill } from 'react-icons/ri';
 import { AiOutlineStar } from 'react-icons/ai';
+import { TbGridDots } from 'react-icons/tb';
+import { MdOutlineSubject } from 'react-icons/md';
+import { HiOutlineMagnifyingGlass } from 'react-icons/hi2';
+import { AiOutlineHeart } from 'react-icons/ai';
+
+import Poster from './assests/Poster.jpg';
 
 export default function Home() {
   const slides = [
@@ -86,17 +94,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-[1280px] h-[780px] bg-white mx-auto top-[40%] -translate-x-0 translate-y-[-30%] px-11 pt-5 pb-5">
-        <div className="w-full flex uppercase font-semibold border-b-2 pb-5">
-          <div className="w-4/6 flex justify-between">
-            <div className="">in theaters</div>
+      <section className="w-[1280px] h-screen bg-white mx-auto top-[40%] -translate-x-0 translate-y-[-25%] px-11 pt-5 pb-5">
+        <div className="w-full flex uppercase font-semibold">
+          <div className="w-4/6 flex justify-between items-center border-b-2 pb-5">
+            <div className="text-yellow-500">in theaters</div>
             <div>coming soon</div>
             <div>charts</div>
             <div>tv series </div>
             <div>trailers</div>
-            <div>more</div>
+            <div className="flex items-center">
+              more <RiArrowDownSFill size={18} />
+            </div>
           </div>
-          <div className="w-2/6  text-right">
+          <div className="w-2/6  text-right border-b-2 pb-5">
             <button
               type="button"
               className=" w-1/4 inline-block rounded bg-yellow-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
@@ -105,6 +115,40 @@ export default function Home() {
                 <AiOutlineStar size={18} /> <span className="text-sm">129</span>
               </div>
             </button>
+          </div>
+        </div>
+        <div className="flex items-center py-10">
+          <div className="">
+            <MdOutlineSubject size={24} />
+          </div>
+          <div className="pl-6">
+            <TbGridDots size={24} />
+          </div>
+          <div className="w-full pl-6 ">
+            <div className="flex justify-between">
+              <label className="block text-sm font-medium text-gray-900 dark:text-white">
+                IMDb Rating
+              </label>
+              <HiOutlineMagnifyingGlass size={24} />
+            </div>
+            <input
+              id="small-range"
+              type="range"
+              className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm dark:bg-gray-700"
+            />
+          </div>
+        </div>
+        <div className="h-full">
+          <div className="h-5/6 w-1/3 ">
+            <div className="h-5/6 w-full relative">
+              <Image src={Poster} fill={true} alt="poster" />
+            </div>
+            <div>Akria</div>
+            <div>Anime Sci-Fi Adventure</div>
+            <div>
+              <AiOutlineHeart size={32} />
+            </div>
+            <div>8.3</div>
           </div>
         </div>
       </section>
